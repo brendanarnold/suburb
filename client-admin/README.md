@@ -1,17 +1,13 @@
-# polis-client-admin
+# Polis Admin Console
 
-Polis Admin Console.
+## Configuration
 
-## Dependencies
+Install the NVM following the instructions: [NVM Installation Guide](https://github.com/creationix/nvm#install-script).
 
-* node `11.15.0`
-* npm `7.0.15`
-
-## Setup
+Them run the commands below to install the correct Node.JS version and the application dependencies.
 
 ```sh
-n 11.15.0
-npm install -g npm@7.0
+nvm install 14.14.0
 npm install
 ```
 
@@ -24,21 +20,21 @@ npm cache clear
 npm install
 ```
 
-## Building and Deploying for Production
-
-To build static assets for a production deployment, run:
+## Running Application
 
 ```sh
-gulp dist
+nvm use 14.14.0
+npm start
 ```
 
-As a convenience, the `npm deploy:prod` is provided for deploying to AWS S3 or
-via SCP to a static file server. For S3 deployment, place your AWS credentials
-in a JSON file at `.polis_s3_creds_client.json` that looks like this:
+## Building for Production
 
-```json
-{"key": "XXXXXXX", "secret": "YYYYYYY"}
+To build static assets into `dist/` for a production deployment, run
+
+```sh
+npm run build:prod
 ```
+
 
 ## QA Steps
 
